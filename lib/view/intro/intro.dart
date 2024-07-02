@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:kido_loom/color.dart';
+import 'package:kido_loom/utils/color.dart';
+import 'package:kido_loom/view/home/home.dart';
 
 class IntroScreen extends StatefulWidget {
   const IntroScreen({super.key});
@@ -104,17 +105,25 @@ class _IntroScreenState extends State<IntroScreen> {
             SizedBox(
               height: height * 0.02,
             ),
-            Container(
-              height: height * 0.07,
-              width: width * 0.9,
-              decoration: BoxDecoration(
-                color: txt1,
-                borderRadius: BorderRadius.circular(20.0),
-              ),
-              child: Center(
-                child: Text('Let’s get started',
-                    style:
-                        TextStyle(fontSize: width * 0.03, color: whiteColor)),
+            InkWell(
+              onTap: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => HomeScreen()),
+                );
+              },
+              child: Container(
+                height: height * 0.07,
+                width: width * 0.9,
+                decoration: BoxDecoration(
+                  color: txt1,
+                  borderRadius: BorderRadius.circular(20.0),
+                ),
+                child: Center(
+                  child: Text('Let’s get started',
+                      style:
+                          TextStyle(fontSize: width * 0.03, color: whiteColor)),
+                ),
               ),
             )
           ],
