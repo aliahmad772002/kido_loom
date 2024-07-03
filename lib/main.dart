@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:kido_loom/view/intro/intro.dart';
+import 'package:kido_loom/view/splashscreen/splashscreen.dart';
 
 void main() {
   runApp(const MyApp());
@@ -17,7 +17,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
       ),
-      home: IntroScreen(),
+      home: SplashScreen(),
     );
   }
 }
