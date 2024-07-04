@@ -27,7 +27,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
             child: Appbar(),
           ),
           body: Container(
-            child: Center(child: Text('ProfileScreen')),
+            child: Center(child: Text('Profile')),
           ),
         ));
   }
