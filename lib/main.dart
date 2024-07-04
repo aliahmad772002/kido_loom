@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:kido_loom/view/login/login.dart';
 import 'package:kido_loom/view/splashscreen/splashscreen.dart';
 
 void main() {

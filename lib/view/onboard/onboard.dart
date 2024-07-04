@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:kido_loom/utils/color.dart';
 import 'package:kido_loom/view/bottombar/bottombar.dart';
 import 'package:kido_loom/view/home/home.dart';
+import 'package:kido_loom/view/login/login.dart';
 
 class OnboardingScreen extends StatefulWidget {
   @override
@@ -93,7 +94,7 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
                       onPressed: () {
                         Navigator.push(
                           context,
-                          MaterialPageRoute(builder: (context) => BottomBar()),
+                          MaterialPageRoute(builder: (context) => Login()),
                         );
                       },
                       child: Text('Let’s get started',
@@ -118,7 +119,7 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
                             Navigator.push(
                               context,
                               MaterialPageRoute(
-                                  builder: (context) => BottomBar()),
+                                  builder: (context) => Login()),
                             );
                           },
                           child: Text(
