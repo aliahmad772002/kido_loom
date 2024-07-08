@@ -68,7 +68,7 @@ class _ScheduleScreenState extends State<ScheduleScreen> {
                 ]
                 ),
                 
-              Container(height: height*0.1,width: width*0.2,color: Colors.amber,)
+              Container(height: height*0.1,width: width*0.2,color: Colors.green,)
             ],
           ),
         ));
