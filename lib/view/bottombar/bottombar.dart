@@ -76,7 +76,7 @@ class _BottomBarState extends State<BottomBar> {
                 children: [
                   TabItem(
                     text: tabs[0],
-                    imagePath: 'images/home.png',
+                    imagePath: 'assets/images/home.png',
                     isSelected: selectedPosition == 0,
                     onTap: () {
                       _navigateToScreen(0);
@@ -84,7 +84,7 @@ class _BottomBarState extends State<BottomBar> {
                   ),
                   TabItem(
                     text: tabs[1],
-                    imagePath: 'images/sdl.png',
+                    imagePath: 'assets/images/sdl.png',
                     isSelected: selectedPosition == 1,
                     onTap: () {
                       _navigateToScreen(1);
@@ -95,7 +95,7 @@ class _BottomBarState extends State<BottomBar> {
                   ),
                   TabItem(
                     text: tabs[2],
-                    imagePath: 'images/msg.png',
+                    imagePath: 'assets/images/msg.png',
                     isSelected: selectedPosition == 2,
                     onTap: () {
                       _navigateToScreen(2);
@@ -103,7 +103,7 @@ class _BottomBarState extends State<BottomBar> {
                   ),
                   TabItem(
                     text: tabs[3],
-                    imagePath: 'images/prsn.png',
+                    imagePath: 'assets/images/prsn.png',
                     isSelected: selectedPosition == 3,
                     onTap: () {
                       _navigateToScreen(3);

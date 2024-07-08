@@ -18,7 +18,9 @@ class _LoginState extends State<Login> {
     var height = MediaQuery.of(context).size.height;
     var width = MediaQuery.of(context).size.width;
     return Scaffold(
+        resizeToAvoidBottomInset: false,
         body: SafeArea(
+
       child: Center(
           child: Column(
         children: [
