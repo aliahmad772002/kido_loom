@@ -23,7 +23,7 @@ class Appbar extends StatelessWidget {
               Text('Hello!',
                   style: TextStyle(fontSize: width * 0.03, color: font2)),
               Text('Alice Sienfeld',
-                  style: TextStyle(fontSize: width * 0.04, color: font1)),
+                  style: TextStyle(fontSize: width * 0.04, color: font1,fontWeight: FontWeight.bold)),
               Row(
                 children: [
                   Icon(Icons.location_on_outlined,
