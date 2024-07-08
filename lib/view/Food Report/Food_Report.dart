@@ -30,9 +30,20 @@ class _foodReportState extends State<foodReport> {
             children: [
               Stack(children: [
                 Container(
+                  height: height*0.31,
+                  width: width,
                   child: CustomPaint(
-                    size: Size(width, (width * 0.5974358974358974).toDouble()),
+                    
                     painter: fcustompaint1(),
+                    child: Column(children: [Padding(
+                  padding: const EdgeInsets.only(right: 150,top: 30),
+                  child: Text('Food Report',style: TextStyle(fontSize: width*0.04,fontWeight: FontWeight.w800,color: font1),),
+                ),
+                Padding(
+                  padding: const EdgeInsets.only(right: 100,top: 10),
+                  child: Text('Select Specific date or range',style: TextStyle(fontSize: 8),),
+                )],),
+                    
                   ),
                 ),
                 Padding(
@@ -77,22 +88,17 @@ class _foodReportState extends State<foodReport> {
                 Padding(
                   padding: const EdgeInsets.only(left: 200),
                   child: SizedBox(
-                            height: height * 0.3,
-                            child: Image.asset('images/Frame1.png')),
-                            
+                      height: height * 0.3,
+                      child: Image.asset('images/Frame1.png')),
                 ),
                 Padding(
-                  padding: const EdgeInsets.only(left: 250,top: 50),
+                  padding: const EdgeInsets.only(left: 250, top: 50),
                   child: Image.asset('images/baloon1.png'),
                 ),
                 Padding(
                   padding: const EdgeInsets.only(left: 150),
                   child: Image.asset('images/baloon.png'),
                 ),
-                Padding(
-                  padding: const EdgeInsets.only(left: 30,top: 25),
-                  child: Text('Food Report',style: TextStyle(fontSize: width*0.04,fontWeight: FontWeight.w800,color: font1),),
-                )
               ]),
             ],
           ),

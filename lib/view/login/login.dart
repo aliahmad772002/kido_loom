@@ -34,7 +34,7 @@ class _LoginState extends State<Login> {
                   
                      SizedBox(
           width: width * 0.55,
-          child: Image(image: AssetImage('images/k.png')),
+          child: Image(image: AssetImage('assets/images/k.png')),
         ),
         SizedBox(height: height*0.1),
                   

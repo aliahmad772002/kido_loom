@@ -14,7 +14,7 @@ class Appbar extends StatelessWidget {
         children: [
           CircleAvatar(
             backgroundColor: Colors.transparent,
-            backgroundImage: AssetImage('images/profile.png'),
+            backgroundImage: AssetImage('assets/images/profile.png'),
           ),
           SizedBox(width: 10),
           Column(

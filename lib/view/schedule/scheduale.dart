@@ -35,7 +35,7 @@ class _ScheduleScreenState extends State<ScheduleScreen> {
                       width: width,
                       decoration: new BoxDecoration(
                         image: new DecorationImage(
-                            image: AssetImage('images/kid.png'),
+                            image: AssetImage('assets/images/kid.png'),
                             fit: BoxFit.fill),
                         borderRadius: BorderRadius.circular(20),
                         gradient: container1,

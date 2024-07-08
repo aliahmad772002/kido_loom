@@ -79,24 +79,24 @@ class _HomeScreenState extends State<HomeScreen> {
                               SizedBox(height: height * 0.03),
                               Button(
                                 'Attendance',
-                                'images/calendar.png',
-                                'images/circle.png',
+                                'assets/images/calendar.png',
+                                'assets/images/circle.png',
                                 height,
                                 width,
                               ),
                               SizedBox(height: height * 0.01),
                               Button(
                                 'Room#: 3',
-                                'images/calendar.png',
-                                'images/circle.png',
+                                'assets/images/calendar.png',
+                                'assets/images/circle.png',
                                 height,
                                 width,
                               ),
                               SizedBox(height: height * 0.01),
                               Button(
                                 'Today’s schedule',
-                                'images/calendar.png',
-                                'images/circle.png',
+                                'assets/images/calendar.png',
+                                'assets/images/circle.png',
                                 height,
                                 width,
                               ),
@@ -119,7 +119,7 @@ class _HomeScreenState extends State<HomeScreen> {
                                       borderRadius:
                                           BorderRadius.circular(height / 2),
                                       child: Image.asset(
-                                        'images/child.png',
+                                        'assets/images/child.png',
                                         fit: BoxFit.cover,
                                       ),
                                     ),
@@ -137,15 +137,15 @@ class _HomeScreenState extends State<HomeScreen> {
                   mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                   children: [
                     Image.asset(
-                      'images/feed1.png',
+                      'assets/images/feed1.png',
                       width: width * 0.25,
                     ),
                     Image.asset(
-                      'images/sleep1.png',
+                      'assets/images/sleep1.png',
                       width: width * 0.25,
                     ),
                     Image.asset(
-                      'images/diaper1.png',
+                      'assets/images/diaper1.png',
                       width: width * 0.25,
                     ),
                   ],
@@ -321,7 +321,7 @@ class _HomeScreenState extends State<HomeScreen> {
                       padding: const EdgeInsets.only(left: 145),
                       child: SizedBox(
                           height: height * 0.5,
-                          child: Image.asset('images/Frame.png')),
+                          child: Image.asset('assets/images/Frame.png')),
                     )
                   ],
                 )

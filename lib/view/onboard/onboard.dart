@@ -38,7 +38,7 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
                 children: [
                   // Page 1
                   OnboardingPage(
-                    imagePath: 'images/people1.png',
+                    imagePath: 'assets/images/people1.png',
                     title: 'Safe and Nurturing Environment',
                     descriptionLines: [
                       'Look for clear facility with a focus',
@@ -49,7 +49,7 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
                   ),
                   // Page 2
                   OnboardingPage(
-                    imagePath: 'images/people2.png',
+                    imagePath: 'assets/images/people2.png',
                     title: 'Learning and Development:',
                     descriptionLines: [
                       'The center should prioritize fostering a love',
@@ -59,7 +59,7 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
                   ),
                   // Page 3
                   OnboardingPage(
-                    imagePath: 'images/people.png',
+                    imagePath: 'assets/images/people.png',
                     title: 'Parent Involvement:',
                     descriptionLines: [
                       'Also as it says opportunities for parents to',
@@ -203,7 +203,7 @@ class OnboardingPage extends StatelessWidget {
         ),
         SizedBox(
           width: width * 0.55,
-          child: Image(image: AssetImage('images/k.png')),
+          child: Image(image: AssetImage('assets/images/k.png')),
         ),
         Text(
           title,

@@ -34,7 +34,7 @@ class _SplashScreenState extends State<SplashScreen> {
           decoration: BoxDecoration(
             gradient: bgColor,
           ),
-          child: Center(child: Image.asset('images/k.png'))),
+          child: Center(child: Image.asset('assets/images/k.png'))),
     );
   }
 }
