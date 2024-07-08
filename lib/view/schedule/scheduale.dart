@@ -25,52 +25,52 @@ class _ScheduleScreenState extends State<ScheduleScreen> {
           preferredSize: Size.fromHeight(70),
           child: Appbar(),
         ),
-        body:Column(
-          children: [
-            Stack(children: [
-              
-                Container(
-                    height: height * 0.37,
-                    width: width,
-                    decoration: new BoxDecoration(
-                      image: new DecorationImage(
-                          image: AssetImage('images/kid.png'),
-                          fit: BoxFit.fill),
-                      borderRadius: BorderRadius.circular(20),
-                      gradient: container1,
-                    )),
-                Row(
-                  children: [
-                    Padding(padding: EdgeInsets.only(top: 410, left: 20)),
-                    Container(
-                      height: height * 0.11,
-                      width: width * 0.4,
-                      decoration: BoxDecoration(
-                        gradient: bgColor,
-                          borderRadius: BorderRadius.only(
-                              bottomLeft: Radius.circular(15),
-                              topLeft: Radius.circular(15)),
-                          ),
-                    ),
-                    Container(
-                      height: height * 0.11,
-                      width: width * 0.4,
-                      decoration: BoxDecoration(
-                          color: Colors.black,
-                          borderRadius: BorderRadius.only(
-                              bottomRight: Radius.circular(15),
-                              topRight: Radius.circular(15))),
-                    ),
-                  ],
-                )
-              ]
-              ),
-              Padding(
-                padding: const EdgeInsets.only(bottom: 50),
-                child: Container(height: height*0.1,width: width*0.2,color: Colors.amber,),
-              )
-            
-          ],
+        body:SingleChildScrollView(
+          child: Column(
+            children: [
+              Stack(children: [
+                
+                  Container(
+                      height: height * 0.37,
+                      width: width,
+                      decoration: new BoxDecoration(
+                        image: new DecorationImage(
+                            image: AssetImage('images/kid.png'),
+                            fit: BoxFit.fill),
+                        borderRadius: BorderRadius.circular(20),
+                        gradient: container1,
+                      )),
+                  Row(
+                    children: [
+                      Padding(padding: EdgeInsets.only(top: 410, left: 20)),
+                      Container(
+                        height: height * 0.11,
+                        width: width * 0.4,
+                        decoration: BoxDecoration(
+                          gradient: bgColor,
+                            borderRadius: BorderRadius.only(
+                                bottomLeft: Radius.circular(15),
+                                topLeft: Radius.circular(15)),
+                            ),
+                      ),
+                      Container(
+                        height: height * 0.11,
+                        width: width * 0.4,
+                        decoration: BoxDecoration(
+                            color: Colors.black,
+                            borderRadius: BorderRadius.only(
+                                bottomRight: Radius.circular(15),
+                                topRight: Radius.circular(15))),
+                      ),
+                    ],
+                  ),
+                  
+                ]
+                ),
+                
+              Container(height: height*0.1,width: width*0.2,color: Colors.amber,)
+            ],
+          ),
         ));
   }
 }
