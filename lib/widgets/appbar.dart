@@ -44,14 +44,14 @@ class Appbar extends StatelessWidget {
                 size: width * 0.05,
                 color: font1,
               ),
-              SizedBox(width: 10),
+              SizedBox(width: width*0.01),
               Icon(
                 Icons.notifications_none_outlined,
                 size: width * 0.05,
                 color: font1,
               ),
               SizedBox(
-                width: 10,
+                width: width*0.01,
               ),
               Icon(
                 Icons.menu,

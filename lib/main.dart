@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:kido_loom/view/home/home.dart';
 import 'package:kido_loom/view/login/login.dart';
+import 'package:kido_loom/view/schedule/scheduale.dart';
 import 'package:kido_loom/view/splashscreen/splashscreen.dart';
 
 void main() {
@@ -18,7 +20,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
       ),
-      home: SplashScreen(),
+      home: HomeScreen(),
     );
   }
 }

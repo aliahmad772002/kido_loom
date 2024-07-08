@@ -8,6 +8,16 @@ final bgColor = LinearGradient(
     Color(0xffC8FFFD),
   ],
 );
+
+final bgColor1 = new LinearGradient(
+  begin: Alignment.topLeft,
+  end: Alignment.bottomRight,
+  colors: [
+    Color(0xFFE0BB),
+    Color(0xF9C281),
+  ],
+);
+
 final borderColor = Color(0xff18D0CC);
 final whiteColor = Color(0xffFFFFEA);
 final white = Color(0xffFFFFFF);
