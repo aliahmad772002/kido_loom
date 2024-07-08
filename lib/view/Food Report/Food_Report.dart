@@ -40,9 +40,11 @@ class _foodReportState extends State<foodReport> {
                   child: Text('Food Report',style: TextStyle(fontSize: width*0.04,fontWeight: FontWeight.w800,color: font1),),
                 ),
                 Padding(
-                  padding: const EdgeInsets.only(right: 100,top: 10),
+                  padding: const EdgeInsets.only(right: 110,top: 10),
                   child: Text('Select Specific date or range',style: TextStyle(fontSize: 8),),
-                )],),
+                ),
+                
+                ],),
                     
                   ),
                 ),
