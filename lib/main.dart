@@ -1,7 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:kido_loom/view/Food%20Report/Food_Report.dart';
-import 'package:kido_loom/view/home/home.dart';
-import 'package:kido_loom/view/login/login.dart';
 import 'package:kido_loom/view/schedule/scheduale.dart';
 import 'package:kido_loom/view/splashscreen/splashscreen.dart';
 

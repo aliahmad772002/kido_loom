@@ -16,6 +16,7 @@ class _ResetPassword1State extends State<ResetPassword1> {
         var height = MediaQuery.of(context).size.height;
     var width = MediaQuery.of(context).size.width;
     return Scaffold(
+        resizeToAvoidBottomInset: false,
         body: SafeArea(
       child: Center(
           child: Column(
