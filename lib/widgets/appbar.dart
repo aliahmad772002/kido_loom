@@ -12,11 +12,11 @@ class Appbar extends StatelessWidget {
       automaticallyImplyLeading: false,
       title: Row(
         children: [
-          CircleAvatar(
+          const CircleAvatar(
             backgroundColor: Colors.transparent,
             backgroundImage: AssetImage('assets/images/profile.png'),
           ),
-          SizedBox(width: 10),
+          const SizedBox(width: 10),
           Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [

@@ -7,6 +7,8 @@ import 'package:kido_loom/view/profile/profile.dart';
 import 'package:kido_loom/view/schedule/scheduale.dart';
 
 class BottomBar extends StatefulWidget {
+  const BottomBar({super.key});
+
   @override
   _BottomBarState createState() => _BottomBarState();
 }
@@ -18,10 +20,10 @@ class _BottomBarState extends State<BottomBar> {
 
   // Screens corresponding to each tab
   final List<Widget> screens = [
-    HomeScreen(),
-    ScheduleScreen(),
-    MessageScreen(),
-    ProfileScreen(),
+    const HomeScreen(),
+    const ScheduleScreen(),
+    const MessageScreen(),
+    const ProfileScreen(),
   ];
 
   @override
@@ -35,7 +37,7 @@ class _BottomBarState extends State<BottomBar> {
         onPressed: () {},
         child: ShaderMask(
           shaderCallback: (Rect bounds) {
-            return LinearGradient(
+            return const LinearGradient(
               colors: [
                 Color(0xFFCFF0FF),
                 Color(0xff80C8EA),
@@ -45,7 +47,7 @@ class _BottomBarState extends State<BottomBar> {
             ).createShader(bounds);
           },
           blendMode: BlendMode.srcIn,
-          child: Icon(Icons.add),
+          child: const Icon(Icons.add),
         ),
       ),
       floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
@@ -57,7 +59,7 @@ class _BottomBarState extends State<BottomBar> {
   Widget _buildBottomTab() {
     return BottomAppBar(
       color: whiteColor,
-      shape: CircularNotchedRectangle(),
+      shape: const CircularNotchedRectangle(),
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: <Widget>[
@@ -77,7 +79,7 @@ class _BottomBarState extends State<BottomBar> {
               _navigateToScreen(1);
             },
           ),
-          SizedBox(
+          const SizedBox(
             width: 48,
           ),
           TabItem(

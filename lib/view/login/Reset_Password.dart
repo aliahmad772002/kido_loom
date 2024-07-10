@@ -25,7 +25,7 @@ class _ResetPasswordState extends State<ResetPassword> {
           Container(
             height: height,
             width: width,
-            decoration: BoxDecoration(
+            decoration: const BoxDecoration(
               gradient: bgColor,
             ),
               child: Column(
@@ -34,7 +34,7 @@ class _ResetPasswordState extends State<ResetPassword> {
                   
                      SizedBox(
           width: width * 0.55,
-          child: Image(image: AssetImage('assets/images/k.png')),
+          child: const Image(image: AssetImage('assets/images/k.png')),
         ),
         SizedBox(height: height*0.1),
                   
@@ -46,17 +46,17 @@ class _ResetPasswordState extends State<ResetPassword> {
                     'Enter Your Email',
                     style: TextStyle(color: Color.fromARGB(255, 13, 72, 121),fontSize: 10,fontWeight:FontWeight.w900),
                   ),
-                  SizedBox(height: 10,),
+                  const SizedBox(height: 10,),
                   
                     
-                  myTextField(hintText: 'Enter your account email'),
+                  const myTextField(hintText: 'Enter your account email'),
                   
-                  SizedBox(height: 10,),
+                  const SizedBox(height: 10,),
               
-                  SizedBox(height: 10,),
+                  const SizedBox(height: 10,),
                   myButton(onTap: (){ Navigator.push(
                           context,
-                          MaterialPageRoute(builder: (context) => ResetPassword1()),
+                          MaterialPageRoute(builder: (context) => const ResetPassword1()),
                         );}, btnText: 'Send link'),
                   
 

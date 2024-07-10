@@ -17,17 +17,17 @@ class _MessageScreenState extends State<MessageScreen> {
     return Container(
         height: height,
         width: width,
-        decoration: BoxDecoration(
+        decoration: const BoxDecoration(
           gradient: bgColor,
         ),
         child: Scaffold(
           backgroundColor: Colors.transparent,
-          appBar: PreferredSize(
+          appBar: const PreferredSize(
             preferredSize: Size.fromHeight(70),
             child: Appbar(),
           ),
           body: Container(
-            child: Center(child: Text('MessageScreen')),
+            child: const Center(child: Text('MessageScreen')),
           ),
         ));
   }

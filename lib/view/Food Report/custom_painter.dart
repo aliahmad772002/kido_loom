@@ -17,9 +17,9 @@ class fcustompaint1 extends CustomPainter{
     path_0.lineTo(size.width*0.03846154,size.height*0.1673820);
     path_0.close();
 
-Paint paint_0_fill = Paint()..style=PaintingStyle.fill;
-paint_0_fill.shader = ui.Gradient.linear(Offset(size.width*0.02179487,size.height*0.08702489), Offset(size.width*0.4320564,size.height*0.9972833), [Color(0xffCFF0FF).withOpacity(1),Color(0xff80C8EA).withOpacity(1)], [0,1]);
-canvas.drawPath(path_0,paint_0_fill);
+Paint paint0Fill = Paint()..style=PaintingStyle.fill;
+paint0Fill.shader = ui.Gradient.linear(Offset(size.width*0.02179487,size.height*0.08702489), Offset(size.width*0.4320564,size.height*0.9972833), [const Color(0xffCFF0FF).withOpacity(1),const Color(0xff80C8EA).withOpacity(1)], [0,1]);
+canvas.drawPath(path_0,paint0Fill);
   }
 
   @override
@@ -45,9 +45,9 @@ class fcustompaint2 extends CustomPainter{
     path_0.lineTo(size.width*0.03846154,size.height*0.5310483);
     path_0.close();
 
-Paint paint_0_fill = Paint()..style=PaintingStyle.fill;
-paint_0_fill.shader = ui.Gradient.radial(Offset(0,0),size.width*0.002564103, [Color(0xffF9B6FF).withOpacity(1),Color(0xffF57BFF).withOpacity(1)], [0,1]);
-canvas.drawPath(path_0,paint_0_fill);
+Paint paint0Fill = Paint()..style=PaintingStyle.fill;
+paint0Fill.shader = ui.Gradient.radial(const Offset(0,0),size.width*0.002564103, [const Color(0xffF9B6FF).withOpacity(1),const Color(0xffF57BFF).withOpacity(1)], [0,1]);
+canvas.drawPath(path_0,paint0Fill);
   }
 
   @override
@@ -73,9 +73,9 @@ class fcustompaint3 extends CustomPainter{
     path_0.lineTo(size.width*0.03846154,size.height*0.2392638);
     path_0.close();
 
-Paint paint_0_fill = Paint()..style=PaintingStyle.fill;
-paint_0_fill.shader = ui.Gradient.linear(Offset(size.width*0.1807692,size.height*0.09202454), Offset(size.width*0.6615385,size.height*0.5030675), [Color(0xffFFE0BB).withOpacity(1),Color(0xffF9C281).withOpacity(1)], [0,1]);
-canvas.drawPath(path_0,paint_0_fill);
+Paint paint0Fill = Paint()..style=PaintingStyle.fill;
+paint0Fill.shader = ui.Gradient.linear(Offset(size.width*0.1807692,size.height*0.09202454), Offset(size.width*0.6615385,size.height*0.5030675), [const Color(0xffFFE0BB).withOpacity(1),const Color(0xffF9C281).withOpacity(1)], [0,1]);
+canvas.drawPath(path_0,paint0Fill);
 
   }
 
@@ -102,9 +102,9 @@ class fcustompaint4 extends CustomPainter{
     path_0.lineTo(size.width*0.03846154,size.height*0.2412153);
     path_0.close();
 
-Paint paint_0_fill = Paint()..style=PaintingStyle.fill;
-paint_0_fill.shader = ui.Gradient.linear(Offset(size.width*0.1410256,size.height*0.3404902), Offset(size.width*0.8217949,size.height*0.9202454), [Color(0xffFFBADB).withOpacity(1),Color(0xffF866AC).withOpacity(1)], [0,1]);
-canvas.drawPath(path_0,paint_0_fill);
+Paint paint0Fill = Paint()..style=PaintingStyle.fill;
+paint0Fill.shader = ui.Gradient.linear(Offset(size.width*0.1410256,size.height*0.3404902), Offset(size.width*0.8217949,size.height*0.9202454), [const Color(0xffFFBADB).withOpacity(1),const Color(0xffF866AC).withOpacity(1)], [0,1]);
+canvas.drawPath(path_0,paint0Fill);
   }
 
   @override
@@ -119,9 +119,9 @@ class fcustompaint5 extends CustomPainter{
   @override
   void paint(Canvas canvas, Size size) {
              
-Paint paint_0_fill = Paint()..style=PaintingStyle.fill;
-paint_0_fill.shader = ui.Gradient.linear(Offset(size.width*-14.33318,size.height*0.07997841), Offset(size.width*0.9593692,size.height*0.5893888), [Color(0xffBBFBFF).withOpacity(1),Color(0xff88F0FE).withOpacity(1)], [0,1]);
-canvas.drawRRect(RRect.fromRectAndCorners(Rect.fromLTWH(size.width*0.04102564,size.height*0.1401869,size.width*0.9230769,size.height*0.6261682),bottomRight: Radius.circular(size.width*0.06153846),bottomLeft:  Radius.circular(size.width*0.06153846),topLeft:  Radius.circular(size.width*0.06153846),topRight:  Radius.circular(size.width*0.06153846)),paint_0_fill);
+Paint paint0Fill = Paint()..style=PaintingStyle.fill;
+paint0Fill.shader = ui.Gradient.linear(Offset(size.width*-14.33318,size.height*0.07997841), Offset(size.width*0.9593692,size.height*0.5893888), [const Color(0xffBBFBFF).withOpacity(1),const Color(0xff88F0FE).withOpacity(1)], [0,1]);
+canvas.drawRRect(RRect.fromRectAndCorners(Rect.fromLTWH(size.width*0.04102564,size.height*0.1401869,size.width*0.9230769,size.height*0.6261682),bottomRight: Radius.circular(size.width*0.06153846),bottomLeft:  Radius.circular(size.width*0.06153846),topLeft:  Radius.circular(size.width*0.06153846),topRight:  Radius.circular(size.width*0.06153846)),paint0Fill);
 
   }
 

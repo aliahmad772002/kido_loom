@@ -7,6 +7,8 @@ import 'package:kido_loom/view/profile/profile.dart';
 import 'package:kido_loom/view/schedule/scheduale.dart';
 
 class BottomBar extends StatefulWidget {
+  const BottomBar({super.key});
+
   @override
   _BottomBarState createState() => _BottomBarState();
 }
@@ -18,10 +20,10 @@ class _BottomBarState extends State<BottomBar> {
 
   // Screens corresponding to each tab
   final List<Widget> screens = [
-    HomeScreen(),
-    ScheduleScreen(),
-    MessageScreen(),
-    ProfileScreen(),
+    const HomeScreen(),
+    const ScheduleScreen(),
+    const MessageScreen(),
+    const ProfileScreen(),
   ];
 
   @override
@@ -29,7 +31,7 @@ class _BottomBarState extends State<BottomBar> {
     return Scaffold(
       body: screens[selectedPosition], // Display selected screen here
       bottomNavigationBar: Container(
-        decoration: BoxDecoration(
+        decoration: const BoxDecoration(
           gradient: bgColor,
         ),
         width: MediaQuery.of(context).size.width,
@@ -48,9 +50,13 @@ class _BottomBarState extends State<BottomBar> {
                   borderRadius: BorderRadius.circular(30),
                 ),
                 backgroundColor: font1,
+                elevation: 0.1,
+                onPressed: () {
+                  // Add your onPressed functionality here
+                },
                 child: ShaderMask(
                   shaderCallback: (Rect bounds) {
-                    return LinearGradient(
+                    return const LinearGradient(
                       colors: [
                         Color(0xFFCFF0FF),
                         Color(0xff80C8EA),
@@ -60,15 +66,11 @@ class _BottomBarState extends State<BottomBar> {
                     ).createShader(bounds);
                   },
                   blendMode: BlendMode.srcIn,
-                  child: Icon(Icons.add),
+                  child: const Icon(Icons.add),
                 ),
-                elevation: 0.1,
-                onPressed: () {
-                  // Add your onPressed functionality here
-                },
               ),
             ),
-            Container(
+            SizedBox(
               width: MediaQuery.of(context).size.width,
               height: 80,
               child: Row(
@@ -142,7 +144,7 @@ class BNBCustomPainter extends CustomPainter {
         size.width * 0.35, -5, size.width * 0.38, -2); // Left middle curve
     path.arcToPoint(
       Offset(size.width * 0.62, -2),
-      radius: Radius.circular(10), // Adjust radius for smoothness
+      radius: const Radius.circular(10), // Adjust radius for smoothness
       clockwise: false,
     );
     path.quadraticBezierTo(

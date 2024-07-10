@@ -1,13 +1,10 @@
-import 'dart:ui';
-
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:kido_loom/utils/color.dart';
+import 'package:kido_loom/view/Food%20Report/Food_Report.dart';
 import 'package:kido_loom/view/home/widget/button1.dart';
 import 'package:kido_loom/view/home/widget/custom_clipper.dart';
 import 'package:kido_loom/widgets/appbar.dart';
-import 'dart:ui' as ui;
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});
@@ -19,18 +16,18 @@ class HomeScreen extends StatefulWidget {
 class _HomeScreenState extends State<HomeScreen> {
   @override
   Widget build(BuildContext context) {
-    var height = MediaQuery.of(context).size.height;
-    var width = MediaQuery.of(context).size.width;
+    double screenHeight = MediaQuery.of(context).size.height;
+    double  screenWidth = MediaQuery.of(context).size.width;
     return SafeArea(
       child: Container(
-        height: height,
-        width: width,
-        decoration: BoxDecoration(
+        height: screenHeight,
+        width: screenHeight,
+        decoration: const BoxDecoration(
           gradient: bgColor,
         ),
         child: Scaffold(
           backgroundColor: Colors.transparent,
-          appBar: PreferredSize(
+          appBar: const PreferredSize(
             preferredSize: Size.fromHeight(70),
             child: Appbar(),
           ),
@@ -40,8 +37,8 @@ class _HomeScreenState extends State<HomeScreen> {
                 Padding(
                   padding: const EdgeInsets.all(8.0),
                   child: Container(
-                    height: height * 0.37,
-                    width: width,
+                    height: screenHeight * 0.37,
+                    width: screenWidth,
                     decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(20),
                       gradient: container1,
@@ -56,68 +53,71 @@ class _HomeScreenState extends State<HomeScreen> {
                             children: [
                               Text('My child',
                                   style: TextStyle(
-                                      fontSize: width * 0.028, color: font2)),
+                                      fontSize: screenWidth * 0.028, color: font2)),
                               Text('David Sienfeld',
                                   style: TextStyle(
                                       fontWeight: FontWeight.w500,
-                                      fontSize: width * 0.04,
+                                      fontSize: screenWidth * 0.04,
                                       color: font1)),
                               Row(
                                 children: [
                                   Text('Status',
                                       style: TextStyle(
-                                          fontSize: width * 0.028, color: font2)),
-                                  SizedBox(width: width * 0.02),
+                                          fontSize: screenWidth * 0.028,
+                                          color: font2)),
+                                  SizedBox(width: screenWidth * 0.02),
                                   Text('Present',
                                       style: TextStyle(
-                                          fontSize: width * 0.028, color: green)),
+                                          fontSize: screenWidth * 0.028,
+                                          color: green)),
                                 ],
                               ),
                               Text('Joined: 12/12/2023',
                                   style: TextStyle(
-                                      fontSize: width * 0.028, color: font2)),
-                              SizedBox(height: height * 0.03),
+                                      fontSize: screenWidth * 0.028, color: font2)),
+                              SizedBox(height: screenHeight * 0.03),
                               Button(
                                 'Attendance',
                                 'assets/images/calendar.png',
                                 'assets/images/circle.png',
-                                height,
-                                width,
+                                screenHeight,
+                                screenWidth,
                               ),
-                              SizedBox(height: height * 0.01),
+                              SizedBox(height: screenHeight * 0.01),
                               Button(
                                 'Room#: 3',
                                 'assets/images/calendar.png',
                                 'assets/images/circle.png',
-                                height,
-                                width,
+                                screenHeight,
+                                screenWidth,
                               ),
-                              SizedBox(height: height * 0.01),
+                              SizedBox(height: screenHeight * 0.01),
                               Button(
                                 'Today’s schedule',
                                 'assets/images/calendar.png',
                                 'assets/images/circle.png',
-                                height,
-                                width,
+                                screenHeight,
+                                screenWidth,
                               ),
                             ],
                           ),
                           Column(
                             children: [
                               Container(
-                                height: height * 0.33,
-                                width: width * 0.4,
+                                height: screenHeight * 0.33,
+                                width: screenWidth * 0.4,
                                 decoration: BoxDecoration(
                                   border: Border.all(color: white),
-                                  borderRadius: BorderRadius.circular(height / 2),
+                                  borderRadius:
+                                      BorderRadius.circular(screenHeight / 2),
                                 ),
                                 child: Center(
                                   child: SizedBox(
-                                    height: height * 0.3,
-                                    width: width * 0.35,
+                                    height: screenHeight * 0.3,
+                                    width: screenWidth * 0.35,
                                     child: ClipRRect(
                                       borderRadius:
-                                          BorderRadius.circular(height / 2),
+                                          BorderRadius.circular(screenHeight / 2),
                                       child: Image.asset(
                                         'assets/images/child.png',
                                         fit: BoxFit.cover,
@@ -133,198 +133,146 @@ class _HomeScreenState extends State<HomeScreen> {
                     ),
                   ),
                 ),
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                  children: [
-                    Image.asset(
-                      'assets/images/feed1.png',
-                      width: width * 0.25,
-                    ),
-                    Image.asset(
-                      'assets/images/sleep1.png',
-                      width: width * 0.25,
-                    ),
-                    Image.asset(
-                      'assets/images/diaper1.png',
-                      width: width * 0.25,
-                    ),
-                  ],
-                ),
                 Stack(
                   children: [
                     Container(
-                      height: height * 0.18,
-                      width: width * 1,
-                      child: CustomPaint(
-                        painter: custompaint1(),
-                        child: Column(
-                          children: [
-                            Padding(
-                              padding: const EdgeInsets.only(left: 20, top: 15),
-                              child: Row(
-                                children: [
-                                  ImageIcon(
-                                    AssetImage('assets/icons/stats.png'),
-                                    color: font1,
-                                  ),
-                                  SizedBox(
-                                    width: width * 0.02,
-                                  ),
-                                  Padding(
-                                    padding: const EdgeInsets.only(top: 8),
-                                    child: Text(
-                                      'Progress Report',
-                                      style: TextStyle(
-                                          color: font1,
-                                          fontWeight: FontWeight.bold,
-                                          fontSize: width * 0.04),
-                                    ),
-                                  )
-                                ],
-                              ),
+                      height: screenHeight * 0.22,
+                      width: screenWidth * 1,
+                      color: Colors.transparent,
+                      child: Row(
+                        children: [
+                          Padding(
+                            padding: const EdgeInsets.only(top: 25, left: 10),
+                            child: Container(
+                              height: screenHeight * 0.15,
+                              width: screenWidth * 0.3,
+                              decoration: BoxDecoration(
+                                  borderRadius: BorderRadius.circular(20),
+                                  gradient: LinearGradient(
+                                    begin: Alignment.topLeft,
+                                    end: Alignment.bottomRight,
+                                    colors: [
+                                      Color(0xffB0FCF7),
+                                      Color(0xffFFAFCC),
+
+                                    ],
+                                  )),
+                                  child: Column(
+                                      mainAxisAlignment: MainAxisAlignment.center,
+                                  
+                                          children: [
+                                          
+                                           SizedBox(height: screenHeight*0.05,),
+                                            Text(
+                                              'Feed',
+                                              textAlign: TextAlign.center,
+                                              style: GoogleFonts.robotoSlab(fontWeight: FontWeight.w700,fontSize: 16,color: font1)
+                                              
+                                            ),
+                                            Text(
+                                              '1 hrs ago',
+                                              textAlign: TextAlign.center,
+                                              style: GoogleFonts.quicksand(fontWeight: FontWeight.w400,fontSize: 10,color: font1)
+                                              
+                                            ),
+                                  
+                                          ],
+                                        ),
                             ),
-                            Padding(
-                              padding: const EdgeInsets.only(top: 15,right: 230),
-                              child: ImageIcon(
-                                   AssetImage("assets/icons/carrow.png"),color: font1,),
-                            )
-                          ],
-                        ),
+                          ),
+                          Padding(
+                            padding: const EdgeInsets.only(top: 25, left: 10),
+                            child: Container(height: screenHeight * 0.15,
+                                width: screenWidth * 0.3,
+                                decoration: BoxDecoration(
+                                    borderRadius: BorderRadius.circular(20),
+                                    gradient: LinearGradient(
+                                      begin: Alignment.topLeft,
+                                      end: Alignment.bottomRight,
+                                      colors: [
+                                        Color(0xffFFDDB4),
+                                        Color(0xffA9E882),
+                            
+                                      ],
+                                    )),
+                                    child: Column(
+                                        mainAxisAlignment: MainAxisAlignment.center,
+                                    
+                                            children: [
+                                            
+                                             SizedBox(height: screenHeight*0.05,),
+                                            Text(
+                                              'Sleep',
+                                              textAlign: TextAlign.center,
+                                              style: GoogleFonts.robotoSlab(fontWeight: FontWeight.w700,fontSize: 16,color: font1)
+                                              
+                                            ),
+                                            Text(
+                                              '2 hrs ago',
+                                              textAlign: TextAlign.center,
+                                              style: GoogleFonts.quicksand(fontWeight: FontWeight.w400,fontSize: 10,color: font1)
+                                              
+                                            ),
+                                    
+                                            ],
+                                          ),),
+                          ),
+                          Padding(
+                            padding: const EdgeInsets.only(top: 25, left: 10),
+                            child: Container(height: screenHeight * 0.15,
+                                width: screenWidth * 0.3,
+                                decoration: BoxDecoration(
+                                    borderRadius: BorderRadius.circular(20),
+                                    gradient: LinearGradient(
+                                      begin: Alignment.topLeft,
+                                      end: Alignment.bottomRight,
+                                      colors: [
+                                        Color(0xffB0FCF7),
+                                        Color(0xffFFAFCC),
+                            
+                                      ],
+                                    )),
+                                    child: Column(
+                                        mainAxisAlignment: MainAxisAlignment.center,
+                                    
+                                            children: [
+                                            SizedBox(height: screenHeight*0.05,),
+                                              Text(
+                                                'Diper',
+                                                textAlign: TextAlign.center,
+                                                style: GoogleFonts.robotoSlab(fontWeight: FontWeight.w700,fontSize: 16,color: font1)
+                                                
+                                              ),
+                                              Text(
+                                                '4 hrs ago',
+                                                textAlign: TextAlign.center,
+                                                style: GoogleFonts.quicksand(fontWeight: FontWeight.w400,fontSize: 10,color: font1)
+                                                
+                                              ),
+                                              
+                                    
+                                            ],
+                                          ),),
+                          )
+                        ],
                       ),
                     ),
-                    Padding(
-                      padding: const EdgeInsets.only(top: 50),
-                      child: Container(
-                        height: height * 0.25,
-                        width: width * 1,
-                        child: CustomPaint(
-                          painter: custompaint2(),child: Column(
-                          children: [
-                            Padding(
-                              padding: const EdgeInsets.only(left: 20, top: 50),
-                              child: Row(
-                                children: [
-                                  ImageIcon(
-                                    AssetImage('assets/icons/medkit.png'),
-                                    color: font1,
-                                  ),
-                                  SizedBox(
-                                    width: width * 0.02,
-                                  ),
-                                  Padding(
-                                    padding: const EdgeInsets.only(top: 6),
-                                    child: Text(
-                                      'Health Report',
-                                      style: TextStyle(
-                                          color: font1,
-                                          fontWeight: FontWeight.bold,
-                                          fontSize: width * 0.04),
-                                    ),
-                                  )
-                                ],
-                              ),
-                            ),
-                            Padding(
-                              padding: const EdgeInsets.only(top: 15,right: 230),
-                              child: ImageIcon(
-                                   AssetImage("assets/icons/carrow.png"),color: font1,),
-                            )
-                          ],
-                        ),
-                        ),
-                      ),
-                    ),
-                    Padding(
-                      padding: const EdgeInsets.only(top: 135),
-                      child: Container(
-                        height: height * 0.2,
-                        width: width * 1,
-                        child: CustomPaint(
-                          painter: custompaint3(),child: Column(
-                          children: [
-                            Padding(
-                              padding: const EdgeInsets.only(left: 20, top: 42),
-                              child: Row(
-                                children: [
-                                  ImageIcon(
-                                    AssetImage('assets/icons/brush.png'),
-                                    color: font1,
-                                  ),
-                                  SizedBox(
-                                    width: width * 0.02,
-                                  ),
-                                  Padding(
-                                    padding: const EdgeInsets.only(top: 8),
-                                    child: Text(
-                                      'Daily Activities',
-                                      style: TextStyle(
-                                          color: font1,
-                                          fontWeight: FontWeight.bold,
-                                          fontSize: width * 0.04),
-                                    ),
-                                  )
-                                ],
-                              ),
-                            ),
-                            Padding(
-                              padding: const EdgeInsets.only(top: 3,right: 230),
-                              child: ImageIcon(
-                                   AssetImage("assets/icons/carrow.png"),color: font1,),
-                            )
-                          ],
-                        ),
-                        ),
-                      ),
-                    ),
-                    Padding(
-                      padding: const EdgeInsets.only(top: 227),
-                      child: Container(
-                          height: height * 0.18,
-                          width: width * 1,
-                          child: CustomPaint(
-                            painter: custompaint4(),child: Column(
-                          children: [
-                            Padding(
-                              padding: const EdgeInsets.only(left: 20, top: 15),
-                              child: Row(
-                                children: [
-                                  ImageIcon(
-                                    AssetImage('assets/icons/beer.png'),
-                                    color: font1,
-                                  ),
-                                  SizedBox(
-                                    width: width * 0.02,
-                                  ),
-                                  Padding(
-                                    padding: const EdgeInsets.only(top: 8),
-                                    child: Text(
-                                      'Food',
-                                      style: TextStyle(
-                                          color: font1,
-                                          fontWeight: FontWeight.bold,
-                                          fontSize: width * 0.04),
-                                    ),
-                                  )
-                                ],
-                              ),
-                            ),
-                            Padding(
-                              padding: const EdgeInsets.only(top: 15,right: 230),
-                              child: ImageIcon(
-                                   AssetImage("assets/icons/carrow.png"),color: font1,),
-                            )
-                          ],
-                        ),
-                          )),
-                    ),
-                    Padding(
-                      padding: const EdgeInsets.only(left: 145),
-                      child: SizedBox(
-                          height: height * 0.5,
-                          child: Image.asset('assets/images/Frame.png')),
-                    )
+                   Padding(
+                     padding: const EdgeInsets.only(left: 5),
+                     child: SizedBox(child: Image.asset('assets/images/feeder.png'),),
+                   ),
+                   Padding(
+                     padding: const EdgeInsets.only(left: 140),
+                     child: SizedBox(child: Image.asset('assets/images/sleep.png'),),
+                   ),
+                   Padding(
+                     padding: const EdgeInsets.only(left: 265),
+                     child: SizedBox(child: Image.asset('assets/images/diper.png'),),
+                   )
                   ],
-                )
+                ),
+
+
               ],
             ),
           ),
@@ -333,4 +281,3 @@ class _HomeScreenState extends State<HomeScreen> {
     );
   }
 }
-

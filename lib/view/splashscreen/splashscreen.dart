@@ -14,16 +14,17 @@ class _SplashScreenState extends State<SplashScreen> {
   @override
   void initState() {
     super.initState();
-    Future.delayed(Duration(seconds: 3), () {
+    Future.delayed(const Duration(seconds: 3), () {
       Navigator.pushReplacement(
         context,
         MaterialPageRoute(
             builder: (context) =>
-                OnboardingScreen()), // Navigate to HomePage after delay
+                const OnboardingScreen()), // Navigate to HomePage after delay
       );
     });
   }
 
+  @override
   Widget build(BuildContext context) {
     var height = MediaQuery.of(context).size.height;
     var width = MediaQuery.of(context).size.width;
@@ -31,7 +32,7 @@ class _SplashScreenState extends State<SplashScreen> {
       body: Container(
           height: height,
           width: width,
-          decoration: BoxDecoration(
+          decoration: const BoxDecoration(
             gradient: bgColor,
           ),
           child: Center(child: Image.asset('assets/images/k.png'))),

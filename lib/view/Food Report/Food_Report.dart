@@ -18,10 +18,10 @@ class _foodReportState extends State<foodReport> {
     return Container(
       height: height,
       width: width,
-      decoration: BoxDecoration(gradient: bgColor),
+      decoration: const BoxDecoration(gradient: bgColor),
       child: Scaffold(
         backgroundColor: Colors.transparent,
-        appBar: PreferredSize(
+        appBar: const PreferredSize(
           preferredSize: Size.fromHeight(70),
           child: Appbar(),
         ),
@@ -29,7 +29,7 @@ class _foodReportState extends State<foodReport> {
           child: Column(
             children: [
               Stack(children: [
-                Container(
+                SizedBox(
                   height: height*0.31,
                   width: width,
                   child: CustomPaint(
@@ -39,8 +39,8 @@ class _foodReportState extends State<foodReport> {
                   padding: const EdgeInsets.only(right: 150,top: 30),
                   child: Text('Food Report',style: TextStyle(fontSize: width*0.04,fontWeight: FontWeight.w800,color: font1),),
                 ),
-                Padding(
-                  padding: const EdgeInsets.only(right: 110,top: 10),
+                const Padding(
+                  padding: EdgeInsets.only(right: 110,top: 10),
                   child: Text('Select Specific date or range',style: TextStyle(fontSize: 8),),
                 ),
                 

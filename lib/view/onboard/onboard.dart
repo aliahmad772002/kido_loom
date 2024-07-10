@@ -1,16 +1,16 @@
 import 'package:flutter/material.dart';
 import 'package:kido_loom/utils/color.dart';
-import 'package:kido_loom/view/bottombar/bottombar.dart';
-import 'package:kido_loom/view/home/home.dart';
 import 'package:kido_loom/view/login/login.dart';
 
 class OnboardingScreen extends StatefulWidget {
+  const OnboardingScreen({super.key});
+
   @override
   _OnboardingScreenState createState() => _OnboardingScreenState();
 }
 
 class _OnboardingScreenState extends State<OnboardingScreen> {
-  PageController _pageController = PageController();
+  final PageController _pageController = PageController();
   int _currentPage = 0;
 
   @override
@@ -22,7 +22,7 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
       body: Container(
         height: height,
         width: width,
-        decoration: BoxDecoration(
+        decoration: const BoxDecoration(
           gradient: bgColor,
         ),
         child: Column(
@@ -35,7 +35,7 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
                     _currentPage = page;
                   });
                 },
-                children: [
+                children: const [
                   // Page 1
                   OnboardingPage(
                     imagePath: 'assets/images/people1.png',
@@ -74,7 +74,7 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
               mainAxisAlignment: MainAxisAlignment.center,
               children: List.generate(3, (index) {
                 return Container(
-                  margin: EdgeInsets.symmetric(horizontal: 4.0),
+                  margin: const EdgeInsets.symmetric(horizontal: 4.0),
                   height: height * 0.05,
                   width: width * 0.05,
                   decoration: BoxDecoration(
@@ -94,15 +94,12 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
                       onPressed: () {
                         Navigator.push(
                           context,
-                          MaterialPageRoute(builder: (context) => Login()),
+                          MaterialPageRoute(builder: (context) => const Login()),
                         );
                       },
-                      child: Text('Let’s get started',
-                          style: TextStyle(
-                              fontSize: width * 0.03, color: whiteColor)),
                       style: ElevatedButton.styleFrom(
                         backgroundColor: txt1,
-                        padding: EdgeInsets.symmetric(
+                        padding: const EdgeInsets.symmetric(
                           vertical: 18,
                           horizontal: 130,
                         ),
@@ -110,6 +107,9 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
                           borderRadius: BorderRadius.circular(20.0),
                         ),
                       ),
+                      child: Text('Let’s get started',
+                          style: TextStyle(
+                              fontSize: width * 0.03, color: whiteColor)),
                     )
                   : Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -119,7 +119,7 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
                             Navigator.push(
                               context,
                               MaterialPageRoute(
-                                  builder: (context) => Login()),
+                                  builder: (context) => const Login()),
                             );
                           },
                           child: Text(
@@ -131,11 +131,11 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
                         IconButton(
                           onPressed: () {
                             _pageController.nextPage(
-                              duration: Duration(milliseconds: 300),
+                              duration: const Duration(milliseconds: 300),
                               curve: Curves.ease,
                             );
                           },
-                          icon: Icon(
+                          icon: const Icon(
                             Icons.chevron_right_outlined,
                             color: txt1,
                           ),
@@ -159,7 +159,7 @@ class OnboardingPage extends StatelessWidget {
   final List<String> descriptionLines;
   final bool isLastPage;
 
-  OnboardingPage({
+  const OnboardingPage({super.key, 
     required this.imagePath,
     required this.title,
     required this.descriptionLines,
@@ -203,7 +203,7 @@ class OnboardingPage extends StatelessWidget {
         ),
         SizedBox(
           width: width * 0.55,
-          child: Image(image: AssetImage('assets/images/k.png')),
+          child: const Image(image: AssetImage('assets/images/k.png')),
         ),
         Text(
           title,

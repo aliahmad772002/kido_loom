@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-final bgColor = LinearGradient(
+const bgColor = LinearGradient(
   begin: Alignment.topLeft,
   end: Alignment.bottomRight,
   colors: [
@@ -9,29 +9,29 @@ final bgColor = LinearGradient(
   ],
 );
 
-final bgColor1 = new LinearGradient(
+const bgColor1 = LinearGradient(
   begin: Alignment.topLeft,
   end: Alignment.bottomRight,
   colors: [
-    Color(0xFFE0BB),
-    Color(0xF9C281),
+    Color(0x00ffe0bb),
+    Color(0x00f9c281),
   ],
 );
 
-final borderColor = Color(0xff18D0CC);
-final whiteColor = Color(0xffFFFFEA);
-final white = Color(0xffFFFFFF);
-final txt1 = Color(0xff58508D);
-final txt2 = Color(0xff4D4D4D);
-final font1 = Color(0xff050F68);
-final font2 = Color(0xff292828);
-final circleColor = Color(0xffD3D3D3);
-final green = Color(0xff0CA554);
-final container1 = RadialGradient(
+const borderColor = Color(0xff18D0CC);
+const whiteColor = Color(0xffFFFFEA);
+const white = Color(0xffFFFFFF);
+const txt1 = Color(0xff58508D);
+const txt2 = Color(0xff4D4D4D);
+const font1 = Color(0xff050F68);
+const font2 = Color(0xff292828);
+const circleColor = Color(0xffD3D3D3);
+const green = Color(0xff0CA554);
+const container1 = RadialGradient(
   center: Alignment.topLeft,
   radius: 1.5,
   colors: [
-    const Color(0xFFCAECFD), // lighter color
-    const Color(0xFF80C8EA), // darker color
+    Color(0xFFCAECFD), // lighter color
+    Color(0xFF80C8EA), // darker color
   ],
 );

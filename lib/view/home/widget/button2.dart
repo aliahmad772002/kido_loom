@@ -1,14 +1,11 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
-import 'package:kido_loom/utils/color.dart';
 
 class OverlappingImagesWidget extends StatelessWidget {
   final topImagePath;
   final bottomImagePath;
   double imageWidth;
 
-  OverlappingImagesWidget({
+  OverlappingImagesWidget({super.key, 
     required this.topImagePath,
     required this.bottomImagePath,
     required this.imageWidth,
@@ -23,7 +20,7 @@ class OverlappingImagesWidget extends StatelessWidget {
       child: Stack(
         alignment: Alignment.center,
         children: [
-          Container(
+          SizedBox(
             width: imageWidth,
             height: imageWidth,
             child: Image.asset(
@@ -33,7 +30,7 @@ class OverlappingImagesWidget extends StatelessWidget {
           ),
           Positioned(
             top: 0,
-            child: Container(
+            child: SizedBox(
               width: imageWidth * 0.7, // Adjust the width of the top image
               height: imageWidth * 0.7,
               child: Image.asset(

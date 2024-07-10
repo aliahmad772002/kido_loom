@@ -8,12 +8,12 @@ class TabItem extends StatelessWidget {
   final void Function()? onTap;
 
   const TabItem({
-    Key? key,
+    super.key,
     required this.text,
     required this.imagePath,
     required this.isSelected,
     this.onTap,
-  }) : super(key: key);
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -28,7 +28,7 @@ class TabItem extends StatelessWidget {
             width: 30,
             height: 30, // Adjust height if necessary
           ),
-          SizedBox(height: 4), // Add spacing between image and text
+          const SizedBox(height: 4), // Add spacing between image and text
           Text(
             text,
             style: TextStyle(

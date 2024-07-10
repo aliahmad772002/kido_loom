@@ -19,12 +19,12 @@ class _ScheduleScreenState extends State<ScheduleScreen> {
     return Container(
       height: height,
       width: width,
-      decoration: BoxDecoration(
+      decoration: const BoxDecoration(
         gradient: bgColor,
       ),
       child: Scaffold(
         backgroundColor: Colors.transparent,
-        appBar: PreferredSize(
+        appBar: const PreferredSize(
           preferredSize: Size.fromHeight(70),
           child: Appbar(),
         ),
@@ -38,7 +38,7 @@ class _ScheduleScreenState extends State<ScheduleScreen> {
                     height: height * 0.37,
                     width: width,
                     decoration: BoxDecoration(
-                      image: DecorationImage(
+                      image: const DecorationImage(
                         image: AssetImage('assets/images/kid.png'),
                         fit: BoxFit.fill,
                       ),
@@ -55,7 +55,7 @@ class _ScheduleScreenState extends State<ScheduleScreen> {
                         Container(
                           height: height * 0.11,
                           width: width * 0.4,
-                          decoration: BoxDecoration(
+                          decoration: const BoxDecoration(
                             color: borderColor,
                             borderRadius: BorderRadius.only(
                               bottomLeft: Radius.circular(15),
@@ -66,7 +66,7 @@ class _ScheduleScreenState extends State<ScheduleScreen> {
                         Container(
                           height: height * 0.11,
                           width: width * 0.4,
-                          decoration: BoxDecoration(
+                          decoration: const BoxDecoration(
                             color: Colors.black,
                             borderRadius: BorderRadius.only(
                               bottomRight: Radius.circular(15),
@@ -86,7 +86,7 @@ class _ScheduleScreenState extends State<ScheduleScreen> {
 
                 crossAxisCount: 3,
                 shrinkWrap: true,
-                physics: NeverScrollableScrollPhysics(),
+                physics: const NeverScrollableScrollPhysics(),
                 children: [
                   CustomContainer('Activities', 'assets/images/activity.png', height, width),
                   CustomContainer('Health', 'assets/images/health.png', height, width),

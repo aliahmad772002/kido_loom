@@ -11,7 +11,7 @@ Widget CustomContainer(String text, String image1Path, double height,
       width: width * 0.25,
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(10),
-        color: whiteColor,
+        color: Colors.white,
       ),
       child: Column(
     mainAxisAlignment: MainAxisAlignment.center,

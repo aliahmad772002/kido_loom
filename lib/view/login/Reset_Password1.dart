@@ -24,7 +24,7 @@ class _ResetPassword1State extends State<ResetPassword1> {
           Container(
             height: height,
             width: width,
-            decoration: BoxDecoration(
+            decoration: const BoxDecoration(
               gradient: bgColor,
             ),
               child: Column(
@@ -33,7 +33,7 @@ class _ResetPassword1State extends State<ResetPassword1> {
                   
                      SizedBox(
           width: width * 0.55,
-          child: Image(image: AssetImage('assets/images/k.png')),
+          child: const Image(image: AssetImage('assets/images/k.png')),
         ),
         SizedBox(height: height*0.1),
                   
@@ -45,16 +45,16 @@ class _ResetPassword1State extends State<ResetPassword1> {
                     'Enter new password',
                     style: TextStyle(color: Color.fromARGB(255, 13, 72, 121),fontSize: 10,fontWeight:FontWeight.w900),
                   ),
-                  SizedBox(height: 10,),
+                  const SizedBox(height: 10,),
                   
                     
-                  myTextField(hintText: 'New Password'),
+                  const myTextField(hintText: 'New Password'),
                   
-                  SizedBox(height: 10,),
-                  myTextField(hintText: 'Retype Password'),
-                  SizedBox(height: 10,),
+                  const SizedBox(height: 10,),
+                  const myTextField(hintText: 'Retype Password'),
+                  const SizedBox(height: 10,),
                   myButton(onTap: (){}, btnText: 'Change password'),
-                  SizedBox(height: 10,),
+                  const SizedBox(height: 10,),
                   
 
 

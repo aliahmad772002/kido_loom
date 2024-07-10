@@ -20,8 +20,8 @@ class myTextField extends StatelessWidget {
                             filled: true,
                             fillColor: Colors.white,
                             hintText: hintText,
-                            hintStyle: TextStyle(color: Colors.grey,),
-                            contentPadding: EdgeInsets.symmetric(vertical: 0),
+                            hintStyle: const TextStyle(color: Colors.grey,),
+                            contentPadding: const EdgeInsets.symmetric(vertical: 0),
                             border: OutlineInputBorder(
                               borderRadius: BorderRadius.circular(10),
                               borderSide: BorderSide.none,
